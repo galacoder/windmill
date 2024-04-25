@@ -13,7 +13,7 @@ services:
     expose:
       - 5432
     ports:
-      - 5432:5432
+      - 5444:5432
     environment:
       POSTGRES_PASSWORD: changeme
       POSTGRES_DB: windmill
@@ -132,7 +132,7 @@ services:
       # - ./certs:/certs # Provide custom certificate files like cert.pem and key.pem to enable HTTPS - See the corresponding section in the Caddyfile
     ports:
       # To change the exposed port, simply change 80:80 to <desired_port>:80. No other changes needed
-      - 80:80
+      - 89:80
       # - 443:443 # Uncomment to enable HTTPS handling by Caddy
     environment:
       - BASE_URL=":80"
